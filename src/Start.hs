@@ -202,13 +202,7 @@ module Start
     , Control.Monad.State.Strict.execStateT
     , Control.Monad.State.Strict.evalStateT
       -- ** Exceptions
-    , Control.Exception.Exception (..)
-    , Data.Typeable.Typeable
-    , Control.Exception.SomeException
-    , Control.Exception.IOException
-    , Control.Monad.Catch.MonadThrow (..)
-    , Control.Monad.Catch.MonadCatch (..)
-    , Control.Monad.Catch.MonadMask (..)
+    , module Control.Exception.Safe
     {-
     , Control.Exception.Lifted.throwIO
     , Control.Exception.Lifted.try
@@ -300,8 +294,7 @@ module Start
 
 import qualified System.FilePath
 import System.IO.Error
-import qualified Control.Monad.Catch
-import qualified Control.Exception
+import qualified Control.Exception.Safe
 import qualified Control.Monad.Reader
 import qualified Control.Monad.State.Strict
 import qualified Control.Monad.Writer (MonadWriter (..)) -- don't want to grab the badly implemented WriterT

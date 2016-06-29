@@ -81,6 +81,7 @@ their functionality exported here.  These are:
 * bytestring
 * containers
 * exceptions
+* safe-exceptions
 * mtl
 * stm
 * text
